@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -25,6 +27,10 @@ public class Trecho implements Serializable{
 	
 	@Column(name = "conteudo")
 	private String conteudo;
+	
+	@ManyToOne
+	@JoinColumn
+	private Dialogo dialogo;
 
 	public long getId() {
 		return id;
@@ -40,6 +46,14 @@ public class Trecho implements Serializable{
 
 	public void setConteudo(String conteudo) {
 		this.conteudo = conteudo;
+	}
+
+	public Dialogo getDialogo() {
+		return dialogo;
+	}
+
+	public void setDialogo(Dialogo dialogo) {
+		this.dialogo = dialogo;
 	}
 
 	@Override
