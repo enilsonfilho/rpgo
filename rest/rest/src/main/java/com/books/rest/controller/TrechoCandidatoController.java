@@ -44,6 +44,6 @@ public class TrechoCandidatoController {
 	@ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/trecho/candidato/{id}")
     public void dTC(@PathVariable(value = "id") long id){
-		trechoCandidatoRepository.deleteById(id);
+		trechoCandidatoRepository.delete(id);
     }
 }

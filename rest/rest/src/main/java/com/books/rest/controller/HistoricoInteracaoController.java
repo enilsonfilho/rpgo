@@ -44,6 +44,6 @@ public class HistoricoInteracaoController {
 	@ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/historico/interacao/{id}")
     public void dC(@PathVariable(value = "id") long id){
-		historicoInteracaoRepository.deleteById(id);
+		historicoInteracaoRepository.delete(id);
     }
 }

@@ -44,6 +44,6 @@ public class InteracaoDialogoController {
 	@ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/interacao/dialogo/{id}")
     public void dID(@PathVariable(value = "id") long id){
-		interacaoDialogoRepository.deleteById(id);
+		interacaoDialogoRepository.delete(id);
     }
 }

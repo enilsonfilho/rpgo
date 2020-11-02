@@ -44,6 +44,6 @@ public class MensagemController {
 	@ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/mensagem/{id}")
     public void dC(@PathVariable(value = "id") long id){
-		mensagemRepository.deleteById(id);
+		mensagemRepository.delete(id);
     }
 }

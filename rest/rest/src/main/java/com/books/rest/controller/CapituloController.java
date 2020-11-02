@@ -44,6 +44,6 @@ public class CapituloController {
 	@ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/capitulo/{id}")
     public void dC(@PathVariable(value = "id") long id){
-		capituloRepository.deleteById(id);
+		capituloRepository.delete(id);
     }
 }

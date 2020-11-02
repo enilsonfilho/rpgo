@@ -52,6 +52,6 @@ public class CriadorController {
 	@ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/criador/{id}")
     public void dC(@PathVariable(value = "id") long id){
-		criadorRepository.deleteById(id);
+		criadorRepository.delete(id);
     }
 }

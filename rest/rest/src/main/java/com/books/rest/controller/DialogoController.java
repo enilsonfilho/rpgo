@@ -24,26 +24,26 @@ public class DialogoController {
 	private DialogoRepository dialogoRepository;
 	
 	@ResponseStatus(HttpStatus.OK)
-	@GetMapping("/capitulos")
+	@GetMapping("/dialogos")
 	public List<Dialogo> lD(){
 		return dialogoRepository.findAll();
 	}
     
 	@ResponseStatus(HttpStatus.OK)
-    @GetMapping("/capitulo/{id}")
+    @GetMapping("/dialogo/{id}")
 	public Dialogo lDById(@PathVariable(value = "id") long id){
 		return dialogoRepository.findById(id);
 	}
     
 	@ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/capitulo")
+    @PostMapping("/dialogo")
     public Dialogo sD(@RequestBody Dialogo dialogo){
     	return dialogoRepository.save(dialogo);
     }
     
 	@ResponseStatus(HttpStatus.OK)
-    @DeleteMapping("/capitulo/{id}")
+    @DeleteMapping("/dialogo/{id}")
     public void dD(@PathVariable(value = "id") long id){
-		dialogoRepository.deleteById(id);
+		dialogoRepository.delete(id);
     }
 }

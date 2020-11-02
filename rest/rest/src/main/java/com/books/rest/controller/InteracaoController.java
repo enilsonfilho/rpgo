@@ -44,6 +44,6 @@ public class InteracaoController {
 	@ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/interacao/{id}")
     public void dI(@PathVariable(value = "id") long id){
-		interacaoRepository.deleteById(id);
+		interacaoRepository.delete(id);
     }
 }

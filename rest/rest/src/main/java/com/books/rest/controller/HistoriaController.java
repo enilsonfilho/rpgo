@@ -44,6 +44,6 @@ public class HistoriaController {
 	@ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/historia/{id}")
     public void dH(@PathVariable(value = "id") long id){
-		historiaRepository.deleteById(id);
+		historiaRepository.delete(id);
     }
 }

@@ -52,6 +52,6 @@ public class UsuarioController {
 	@ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/usuario/{id}")
     public void dU(@PathVariable(value = "id") long id){
-		usuarioRepository.deleteById(id);
+		usuarioRepository.delete(id);
     }
 }

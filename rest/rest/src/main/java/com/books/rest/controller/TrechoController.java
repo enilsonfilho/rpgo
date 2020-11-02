@@ -44,6 +44,6 @@ public class TrechoController {
 	@ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/trecho/{id}")
     public void dT(@PathVariable(value = "id") long id){
-		trechoRepository.deleteById(id);
+		trechoRepository.delete(id);
     }
 }
